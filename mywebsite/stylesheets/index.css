@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* line 5, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'hooray';
+  src: url("../fonts/hooray.eot");
+  src: url("../fonts/hooray.eot?#iefix") format("eot"), url("../fonts/hooray.woff") format("woff"), url("../fonts/hooray.ttf") format("truetype"), url("../fonts/hooray.svg#webfontjKg17VrE") format("svg");
+}
+/* line 25, ../sass/index.scss */
+body {
+  font-family: "Comic Sans MS", cursive, ‘Arial Black’, Gadget, sans-serif;
+  background-color: #fff;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 38, ../sass/index.scss */
+.dashboard {
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  -moz-border-radius: 350px;
+  -webkit-border-radius: 350px;
+  border-radius: 350px;
+  text-align: center;
+  width: 700px;
+  height: 800px;
+}
+
+@keyframes headshowup {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+/* line 57, ../sass/index.scss */
+.head {
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  top: 230px;
+  opacity: 0;
+  animation: headshowup 2s linear 1s;
+  animation-fill-mode: forwards;
+  transition: all 0.5s;
+}
+/* line 69, ../sass/index.scss */
+.head:hover {
+  transform: rotateY(180deg);
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.3;
+  }
+  66% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+/* line 81, ../sass/index.scss */
+#myself {
+  position: absolute;
+  left: 310px;
+  top: -40px;
+  animation: showup 2s linear 4s;
+  animation-fill-mode: forwards;
+}
+
+/* line 82, ../sass/index.scss */
+#Japanese {
+  position: absolute;
+  left: 10px;
+  top: 130px;
+  animation: showup 2s linear 5s;
+  animation-fill-mode: forwards;
+}
+
+/* line 83, ../sass/index.scss */
+#movie {
+  position: absolute;
+  left: 4px;
+  top: 480px;
+  animation: showup 2s linear 6s;
+  animation-fill-mode: forwards;
+}
+
+/* line 84, ../sass/index.scss */
+#music {
+  position: absolute;
+  left: 616px;
+  top: 140px;
+  animation: showup 2s linear 7s;
+  animation-fill-mode: forwards;
+}
+
+/* line 85, ../sass/index.scss */
+#ACG {
+  position: absolute;
+  left: 310px;
+  top: 660px;
+  animation: showup 2s linear 8s;
+  animation-fill-mode: forwards;
+}
+
+/* line 86, ../sass/index.scss */
+#game {
+  position: absolute;
+  left: 610px;
+  top: 490px;
+  animation: showup 2s linear 9s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rounded_hover {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+/* line 97, ../sass/index.scss */
+.rounded {
+  opacity: 0;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+}
+/* line 103, ../sass/index.scss */
+.rounded:hover {
+  box-shadow: 0px 0px 20px #0CC;
+}
+
+@keyframes time_showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 114, ../sass/index.scss */
+.date, .time {
+  font-family: "hooray";
+  font-size: 40px;
+  opacity: 0;
+  position: relative;
+}
+
+/* line 122, ../sass/index.scss */
+.date {
+  top: 480px;
+  animation: time_showup 2s linear 2s;
+  animation-fill-mode: forwards;
+}
+
+/* line 127, ../sass/index.scss */
+.time {
+  top: -20px;
+  animation: time_showup 2s linear 3s;
+  animation-fill-mode: forwards;
+}

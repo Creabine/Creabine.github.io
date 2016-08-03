@@ -1,0 +1,73 @@
+@charset "utf-8";
+//reset
+@import "compass/reset";
+//css3
+@import "compass/css3";
+//变量
+$text_border: 1px red solid;
+
+$normal_font_family:'Comic Sans MS', cursive,‘Arial Black’, Gadget, sans-serif;
+$welcome_font_family:'miaowu';
+
+$welcome_animation_delay:0s;
+
+
+@font-face {
+    font-family: 'miaowu';
+    src: url('../fonts/miaowu.ttf');
+    src: url('../fonts/miaowu.ttf') format('truetype'),
+}
+body{
+	font-family: $welcome_font_family $normal_font_family;
+	background-color:#fff;
+	height:100%;
+	background-image:url('../images/acg_bgimg.jpg');
+	background-repeat:no-repeat;
+}
+
+//welcome
+.welcome{
+	//border:$text_border;
+	margin:0 auto;
+	width:1100px;
+	height:600px;
+	margin:100px;
+	text-align:center;
+	font-size:70px;
+	color:white;
+}
+@keyframes welcome_animation{
+	0% {opacity:0;}
+	25% {opacity:1;}
+	50% {opacity:0.7;font-size:75px;}
+	75% {opacity:0.5;}
+	100% {opacity:0;font-size:80px;}
+
+}
+.welcome1,.welcome2,.welcome3,.welcome4,.welcome5{
+	opacity:0;
+	width:1000px;
+	position:absolute;
+	top:350px;
+}
+.welcome1{
+	animation:welcome_animation 2s linear $welcome_animation_delay+1;
+	animation-fill-mode : forwards; 
+}
+.welcome2{
+	animation:welcome_animation 2s linear $welcome_animation_delay+3;
+	animation-fill-mode : forwards; 
+}
+.welcome3{
+	animation:welcome_animation 2s linear $welcome_animation_delay+5;
+	animation-fill-mode : forwards; 
+}
+.welcome4{
+	animation:welcome_animation 2s linear $welcome_animation_delay+7;
+	animation-fill-mode : forwards; 
+}
+.welcome5{
+	animation:welcome_animation 2s linear $welcome_animation_delay+9;
+	animation-fill-mode : forwards; 
+}
+

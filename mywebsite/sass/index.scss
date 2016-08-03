@@ -1,0 +1,131 @@
+@charset "utf-8";
+//reset
+@import "compass/reset";
+//css3
+@import "compass/css3";
+//变量
+$text_border: 1px red solid;
+
+$normal_font_family:'Comic Sans MS', cursive,‘Arial Black’, Gadget, sans-serif;
+
+
+
+$clock_animation_delay: 1s;
+$clock_font_family:'hooray';
+
+
+@font-face {
+    font-family: 'hooray';
+    src: url('../fonts/hooray.eot');
+    src: url('../fonts/hooray.eot?#iefix') format('eot'),
+         url('../fonts/hooray.woff') format('woff'),
+         url('../fonts/hooray.ttf') format('truetype'),
+         url('../fonts/hooray.svg#webfontjKg17VrE') format('svg');
+}
+body{
+	font-family:$normal_font_family;
+	background-color:#fff;
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+}
+
+
+
+
+
+
+.dashboard{
+	margin:0 auto;
+	position:relative;
+	top:100px;
+	//border:$text_border;
+	@include border-radius(350px);
+	text-align:center;
+	width:700px;
+	height:800px;
+}
+@keyframes headshowup{
+	0% {opacity:0;}
+	25% {opacity:0.1;}
+	50% {opacity:0.3;}
+	75% {opacity:0.6;}
+	100% {opacity:0.9;}
+
+}
+
+.head{
+	@include border-radius(100px);
+	width:200px;
+	height:200px;
+	//border:$text_border;
+	margin:0 auto;
+	position:relative;
+	top:230px;
+	opacity:0;
+	animation:headshowup 2s linear $clock_animation_delay;
+	animation-fill-mode : forwards; 
+	transition: all 0.5s;
+	&:hover{
+		transform: rotateY(180deg);
+	}
+}
+
+@keyframes showup{
+	0% {opacity:0;}
+	33% {opacity:0.3;}
+	66% {opacity:0.6;}
+	100% {opacity:0.9;}
+
+}
+#myself{position:absolute; left:310px; top:-40px;animation:showup 2s linear $clock_animation_delay+3;animation-fill-mode : forwards; }
+#Japanese{position:absolute; left:10px; top:130px;animation:showup 2s linear $clock_animation_delay+4;animation-fill-mode : forwards; }
+#movie{position:absolute; left:4px; top:480px;animation:showup 2s linear $clock_animation_delay+5;animation-fill-mode : forwards; }
+#music{position:absolute; left:616px; top:140px;animation:showup 2s linear $clock_animation_delay+6;animation-fill-mode : forwards; }
+#ACG{position:absolute; left:310px; top:660px;animation:showup 2s linear $clock_animation_delay+7;animation-fill-mode : forwards; }
+#game{position:absolute; left:610px; top:490px;animation:showup 2s linear $clock_animation_delay+8;animation-fill-mode : forwards; }
+
+
+@keyframes rounded_hover{
+	0% {opacity:0;}
+	25% {opacity:0.5;}
+	50% {opacity:1;}
+	75% {opacity:0.5;}
+	100% {opacity:0.8;}
+
+}
+.rounded{
+	opacity:0;
+	@include border-radius(40px);
+	width:80px;
+	height:80px;
+	//border:$text_border;
+	&:hover{
+		box-shadow: 0px 0px 20px #0CC;
+	}
+}
+@keyframes time_showup{
+	from {opacity:0;}
+	to {opacity:1;}
+}
+
+
+//日期时间
+.date,.time{
+	font-family:$clock_font_family;
+	font-size:40px;
+	opacity:0;
+	position:relative;
+	//border:$text_border;
+	
+}
+.date{
+	top:480px;
+	animation:time_showup 2s linear $clock_animation_delay+1;
+	animation-fill-mode:forwards; 
+}
+.time{
+	top:-20px;
+	animation:time_showup 2s linear $clock_animation_delay+2;
+	animation-fill-mode:forwards; 
+}

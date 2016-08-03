@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+@import "compass/utilities/sprites";
+@import "mysprites/*.png";
+@include all-mysprites-sprites;

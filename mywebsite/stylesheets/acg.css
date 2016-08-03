@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* line 5, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'miaowu';
+  src: url("../fonts/miaowu.ttf");
+  src: url("../fonts/miaowu.ttf") format("truetype");
+}
+/* line 20, ../sass/acg.scss */
+body {
+  font-family: "miaowu" "Comic Sans MS", cursive, ‘Arial Black’, Gadget, sans-serif;
+  background-color: #fff;
+  height: 100%;
+  background-image: url("../images/acg_bgimg.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 29, ../sass/acg.scss */
+.welcome {
+  margin: 0 auto;
+  width: 1100px;
+  height: 600px;
+  margin: 100px;
+  text-align: center;
+  font-size: 70px;
+  color: white;
+}
+
+@keyframes welcome_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+    font-size: 75px;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    font-size: 80px;
+  }
+}
+/* line 47, ../sass/acg.scss */
+.welcome1, .welcome2, .welcome3, .welcome4, .welcome5 {
+  opacity: 0;
+  width: 1000px;
+  position: absolute;
+  top: 350px;
+}
+
+/* line 53, ../sass/acg.scss */
+.welcome1 {
+  animation: welcome_animation 2s linear 1s;
+  animation-fill-mode: forwards;
+}
+
+/* line 57, ../sass/acg.scss */
+.welcome2 {
+  animation: welcome_animation 2s linear 3s;
+  animation-fill-mode: forwards;
+}
+
+/* line 61, ../sass/acg.scss */
+.welcome3 {
+  animation: welcome_animation 2s linear 5s;
+  animation-fill-mode: forwards;
+}
+
+/* line 65, ../sass/acg.scss */
+.welcome4 {
+  animation: welcome_animation 2s linear 7s;
+  animation-fill-mode: forwards;
+}
+
+/* line 69, ../sass/acg.scss */
+.welcome5 {
+  animation: welcome_animation 2s linear 9s;
+  animation-fill-mode: forwards;
+}

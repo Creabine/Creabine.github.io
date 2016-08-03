@@ -1,0 +1,345 @@
+@charset "UTF-8";
+
+@import "compass/reset";
+
+@import "compass/css3";
+//变量
+$testborder: 1px solid red;
+$blackborder:2px solid #02172D;
+$blackcolor:#02172D;
+$bluecolor:#2FA2E5;
+$miaowu:'miaowu','Comic Sans MS', cursive,‘Arial Black’, Gadget, sans-serif;
+$redcolor:#D80020;
+//字体
+@font-face {
+    font-family: 'miaowu';
+    src: url('../fonts/miaowu.ttf');
+    src: url('../fonts/miaowu.ttf') format('truetype'),
+}
+
+body{
+	width:1200px;
+	height:800px;
+	margin:0 auto;
+}
+.container{
+	float:left;
+	width:550px;
+	height:800px;
+	//border:$testborder;
+	margin:120px 0 0 30px;
+}
+p{
+	font-family:$miaowu;
+	font-size:30px;
+	text-align:center;
+	margin-top:15px;
+}
+
+//css3_draw
+.head{
+	width:220px;
+	height:220px;
+	@include border-radius(110px);
+	background-color:$bluecolor;
+	position:relative;
+	top:100px;
+	left:170px;
+	border:$blackborder;
+}
+.face{
+	width:180px;
+	height:160px;
+	@include border-radius(85px);
+	background-color:#fff;
+	//border:$testborder;
+	position:relative;
+	top:-70px;
+	left:190px;
+}
+.eye{
+	width:46px;
+	height:50px;
+	@include border-radius(25px);
+	background-color:#fff;
+	float:left;
+	position:relative;
+	top:-265px;
+	left:232px;
+	border:$blackborder;
+}
+.eyeleft,.eyeright{
+	width:20px;
+	height:20px;
+	@include border-radius(10px);
+	border-top:$blackborder;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	border-bottom:1px solid transparent;
+	position:relative;
+	
+}
+.eyeleft{
+	top:25px;
+	left:15px;
+}
+.eyeright{
+	top:25px;
+	left:10px;
+}
+
+.nose{
+	width:30px;
+	height:30px;
+	@include border-radius(16px);
+	background-color:$redcolor;
+	border:$blackborder;
+	position:relative;
+	top:-223px;
+	left:265px;
+}
+.nose_light{
+	width:12px;
+	height:12px;
+	@include border-radius(6px);
+	background-color:#fff;
+	position:relative;
+	top:5px;
+	left:6px;
+}
+.undernose{
+	width:2px;
+	height:77px;
+	background-color:#02172D;
+	position:relative;
+	top:-225px;
+	left:282px;
+}	
+.mouth{
+	width:120px;
+	height:120px;
+	@include border-radius(60px);
+	border-bottom:$blackborder;
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+	border-top:1px solid transparent;
+	position:relative;
+	top:-345px;
+	left:220px;
+}
+.whiskers{
+	
+	height:2px;
+	background-color:$blackcolor;
+	position:relative;
+}
+.lefttop{
+	width:55px;
+	top:-430px;
+	left:205px;
+	transform:rotate(15deg);
+}
+.righttop{
+	width:55px;
+	top:-433px;
+	left:305px;
+	transform:rotate(345deg);
+}
+
+.leftmid{
+	width:75px;
+	top:-400px;
+	left:185px;
+}
+.rightmid{
+	width:75px;
+	top:-403px;
+	left:310px;
+}
+.leftbottom{
+	width:80px;
+	top:-380px;
+	left:180px;
+	transform:rotate(345deg);
+}
+.rightbottom{
+	width:80px;
+	top:-383px;
+	left:305px;
+	transform:rotate(15deg);
+}
+
+
+.neck{
+	width:140px;
+	height:10px;
+	background-color:$redcolor;
+	border:$blackborder;
+	position:relative;
+	top:-335px;
+	left:208px;
+	@include border-radius(6px);
+	
+}
+.leftarm,.rightarm{
+	width:40px;
+	height:70px;
+	@include border-radius(20px);
+	background-color:$bluecolor;
+	position:relative;
+}
+.leftarm{
+	top:-340px;
+	left:188px;
+	transform:rotate(35deg);
+	border-left:$blackborder;
+}
+
+.rightarm{
+	top:-410px;
+	left:330px;
+	transform:rotate(325deg);
+	border-right:$blackborder;
+}
+
+.lefthand,.righthand{
+	width:45px;
+	height:45px;
+	@include border-radius(23px);
+	border:$blackborder;
+	background-color:#fff;
+	position:relative;
+}
+.lefthand{
+	top:-440px;
+	left:170px;
+}
+.righthand{
+	top:-485px;
+	left:345px;
+}
+.body{
+	width:140px;
+	height:130px;
+	@include border-bottom-left-radius(23px);
+	@include border-bottom-right-radius(23px);
+	background-color:$bluecolor;
+	border-right:$blackborder;
+	border-left:$blackborder;
+	border-bottom:$blackborder;
+	border-top:1px solid transparent;
+	position:relative;
+	top:-575px;
+	left:208px;
+}
+.stomach{
+	width:120px;
+	height:100px;
+	@include border-radius(53px);
+	background-color:#fff;
+	border:$blackborder;
+	position:relative;
+	top:-5px;
+	left:8px;
+}
+.pocket{
+	width:100px;
+	height:50px;
+	@include border-bottom-left-radius(100px);
+	@include border-bottom-right-radius(100px);
+	border:$blackborder;
+	position:relative;
+	top:-3px;
+	left:8px;
+}
+.bell{
+	width:40px;
+	height:40px;
+	@include border-radius(40px);
+	background-color:#F9E542;
+	border:$blackborder;
+	position:relative;
+	top:-8px;
+	left:38px;
+}
+.bell1{
+	width:40px;
+	height:1px;
+	border:$blackborder;
+	position:relative;
+	top:10px;
+	left:-2px;
+}
+.bell2{
+	width:10px;
+	height:10px;
+	@include border-radius(10px);
+	border:$blackborder;
+	background-color:#7F6B55;
+	position:relative;
+	top:12px;
+	left:13px;
+}
+.bell3{
+	width:2px;
+	height:10px;
+	background-color:$blackcolor;
+	position:relative;
+	top:12px;
+	left:19px;
+}
+.coverleft,.coverright{
+	width:20px;
+	height:20px;
+	background-color:$bluecolor;
+	position:relative;
+	
+}
+.coverleft{
+	top:-113px;
+	left:-17px;
+	transform:rotate(35deg);
+}
+.coverright{
+	top:-132px;
+	left:118px;
+	transform:rotate(325deg);
+}
+.leftfoot,.rightfoot{
+	width:90px;
+	height:30px;
+	@include border-top-left-radius(80px);
+	@include border-bottom-left-radius(100px);
+	border:$blackborder;
+	float:left;
+	position:relative;
+	top:-578px;
+	left:190px;
+}
+.rightfoot{
+	transform:rotateY(180deg);
+}
+.leg1{
+	width:20px;
+	height:2px;
+	background-color:$blackcolor;
+	position:relative;
+	top:18px;
+	left:53px;
+}
+
+.leg2{
+	width:2px;
+	height:20px;
+	background-color:$blackcolor;
+	position:relative;
+	top:18px;
+	left:63px;
+}
+
+
+
+canvas{
+	//border:$testborder;
+	margin:70px 0 0 100px;
+}

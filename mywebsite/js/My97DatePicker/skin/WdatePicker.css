@@ -1,0 +1,23 @@
+.Wdate{
+	height:23px;
+	background:url(datePicker.png) no-repeat right;
+    background-color:#ffffff;
+    cursor: pointer;
+ }  
+ .Wdate1{
+	border:#999999 1px solid;
+	height:20px;
+	background:url(datePicker.png) no-repeat right;
+ 
+ }  
+  .WdateB{
+	border:#999999 1px solid;
+	height:17px;
+	background:url(datePicker.png) no-repeat right;
+ 
+ }  
+
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}                  

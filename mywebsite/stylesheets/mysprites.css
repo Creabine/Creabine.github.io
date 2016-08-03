@@ -1,0 +1,35 @@
+/* line 88, mysprites/*.png */
+.mysprites-sprite, .mysprites-csdn, .mysprites-github, .mysprites-myhead, .mysprites-weixin, .mysprites-xmu, .mysprites-zhihu {
+  background-image: url('../images/mysprites-s065c71c86a.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-csdn {
+  background-position: 0 0;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-github {
+  background-position: 0 -1024px;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-myhead {
+  background-position: 0 -1244px;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-weixin {
+  background-position: 0 -1447px;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-xmu {
+  background-position: 0 -1959px;
+}
+
+/* line 84, D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.mysprites-zhihu {
+  background-position: 0 -2459px;
+}

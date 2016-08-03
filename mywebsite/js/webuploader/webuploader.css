@@ -1,0 +1,41 @@
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	width:15px;
+	height:15px;	
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	background-image: url("../../images/upload(1).png");
+	padding: 0px;
+	color: red;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.webuploader-pick-hover {
+	background-position-Y:-15px;
+}
+.webuploader-pick-hover .webuploader-pick{
+	background-position-Y:-15px;
+}
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+.webuploader-dnd-over .webuploader-pick{
+	background-position-Y:-15px;
+}
+
+.infor_li{height:auto !important;height:23px;min-height:23px; border:0;width:198px; line-height:25px; font-size:12px; color:#666; margin-right:0px;float:left;list-style:none}
+.infor_li li{ height:22px;width:198px; line-height:22px; font-size:12px;float:left;color:#ccc;}
+.infor_li a{padding-left:4px;text-decoration:none;color:#ccc;}
+.infor_li a:hover{ color:#ccc;}
+ .files_queued{border:1px solid #ccc;height:auto !important;height:23px;min-height:23px;width:218px;float:left;background-color: #FFF}

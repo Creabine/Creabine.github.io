@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creabine</title>
+    <link rel="shortcut icon" href="../images/Creabine.ico" type="image/x-icon"/> 
+    <!-- css -->
+    <link href="../stylesheets/css3_canvas_drwa.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+  <title>link</title>
+</head>
+<body>
+  <div class="container">
+    <p>纯CSS3画哆啦A梦</p>
+
+    <div class="head"></div>
+
+    <div class="face"></div>
+
+    <div class="eye"><div class="eyeleft"></div></div>
+    <div class="eye"><div class="eyeright"></div></div>
+    <div class="nose"><div class="nose_light"></div></div>
+    <div class="undernose"></div>
+    <div class="mouth"></div>
+    
+    <div class="whiskers lefttop"></div><div class="whiskers righttop"></div>
+    <div class="whiskers leftmid"></div><div class="whiskers rightmid"></div>
+    <div class="whiskers leftbottom"></div><div class="whiskers rightbottom"></div>
+
+    <div class="neck"></div>
+
+    <div class="leftarm"></div>
+    <div class="rightarm"></div>
+    <div class="lefthand"></div>
+    <div class="righthand"></div>
+
+    <div class="body">
+      <div class="stomach">
+        <div class="bell">
+          <div class="bell1"></div>
+          <div class="bell2"></div>
+          <div class="bell3"></div>
+        </div>
+        <div class="pocket"></div>
+        <div class="leg1"></div>
+        <div class="leg2"></div>
+        <div class="coverleft"></div>
+        <div class="coverright"></div>
+      </div>
+    </div>
+    
+    <div class="leftfoot"></div>
+    <div class="rightfoot"></div>
+
+
+
+
+
+
+  </div>
+  <div class="container">
+    <p>Canvas画哆啦A梦</p>
+
+    <canvas id="mycanvas" width="350" height="450">您的浏览器不支持新的canvas标签，快去更新浏览器吧！</canvas>
+  </div>
+  
+  
+<script type="text/javascript">
+$(document).ready(function($) {
+  console.log("draw start");
+    //初始化canvas
+    var canvas = document.getElementById("mycanvas");
+    var context = canvas.getContext("2d");
+    
+    context.lineWidth = 2;
+    context.strokeStyle = "#02172D";
+    //head
+    context.beginPath();
+    context.arc(180,150,110,0,2*Math.PI);
+    context.fillStyle = "#2FA2E5";
+    context.fill();
+    context.stroke();
+    //face
+    context.beginPath();
+    context.arc(180,170,90,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    //eye
+    context.beginPath();
+    context.arc(155,85,25,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.arc(205,85,25,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.moveTo(145,90);
+    context.quadraticCurveTo(165,60,170,90);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(195,90);
+    context.quadraticCurveTo(200,60,220,90);
+    context.stroke();
+    //nose
+    context.beginPath();
+    context.arc(180,115,15,0,2*Math.PI);
+    context.fillStyle = "#D80020";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.arc(176,111,6,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    context.beginPath();
+    context.moveTo(180,130);
+    context.lineTo(180,210);
+    context.stroke();
+    //whiskers
+    context.beginPath();
+    context.moveTo(160,140);
+    context.lineTo(110,110);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(200,140);
+    context.lineTo(250,110);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(160,160);
+    context.lineTo(80,160);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(200,160);
+    context.lineTo(280,160);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(160,180);
+    context.lineTo(80,200);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(200,180);
+    context.lineTo(280,200);
+    context.stroke();
+    //mouth
+    context.beginPath();
+    context.moveTo(125,195);
+    context.quadraticCurveTo(175,230,240,195);
+    context.stroke();
+    //neck
+    context.beginPath();
+    context.strokeStyle = "#D80020";
+    context.lineWidth = 10;
+    context.lineCap = "round";
+    context.moveTo(110,240);
+    context.lineTo(250,240);
+    context.stroke();
+    //arm
+    context.beginPath();
+    context.lineWidth = 2;
+    context.strokeStyle = "#02172D";
+    context.moveTo(112,245);
+    context.lineTo(75,290);
+    context.fillStyle = "#2FA2E5";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.moveTo(255,245);
+    context.lineTo(285,290);
+    context.fillStyle = "#2FA2E5";
+    context.fill();
+    context.stroke();
+    //hand
+    context.beginPath();
+    context.arc(95,295,23,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.arc(268,295,23,0,2*Math.PI);
+    context.fill();
+    context.stroke();
+    //body
+    context.beginPath();
+    context.moveTo(113,280);
+    context.lineTo(113,355);
+    context.arcTo(113,365,118,365,10);
+    context.lineTo(245,365);
+    context.arcTo(255,365,255,355,10);
+    context.lineTo(255,278);
+    context.arcTo(255,270,280,270,10);
+    context.lineTo(273,270);
+    context.lineTo(255,245);
+    context.lineTo(112,245);
+    context.lineTo(85,275);
+    context.arcTo(93,270,113,280,10);
+    context.closePath();
+    context.fillStyle = "#2FA2E5";
+    context.fill();
+    context.stroke();
+    //stomach
+    context.beginPath();
+    context.arc(185,298,55,0,2*Math.PI);
+    context.fillStyle = "#fff";
+    context.fill();
+    context.stroke();
+    //bell
+    context.beginPath();
+    context.arc(185,260,20,0,2*Math.PI);
+    context.fillStyle = "#F9E542";
+    context.fill();
+    context.stroke();
+    context.beginPath();
+    context.strokeStyle = "#02172D";
+    context.lineWidth = 5;
+    context.lineCap = "round";
+    context.moveTo(168,253);
+    context.lineTo(202,253);
+    context.stroke();
+    context.beginPath();
+    context.arc(185,265,5,0,2*Math.PI);
+    context.fillStyle = "#776753";
+    context.fill();
+    context.lineWidth = 2;
+    context.stroke();
+    context.beginPath();
+    context.moveTo(185,271);
+    context.lineTo(185,280);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(145,300);
+    context.lineTo(225,300);
+    context.arc(185,300,40,0,Math.PI);
+    context.stroke();
+    //foot
+    context.beginPath();
+    context.moveTo(185,365);
+    context.lineTo(185,395);
+    context.lineTo(100,395);
+    context.arc(100,380,15,0.5*Math.PI,1.5*Math.PI);
+    context.lineTo(275,365);
+    context.arc(275,380,15,1.5*Math.PI,0.5*Math.PI);
+    context.lineTo(185,395);
+    context.lineTo(185,358);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(180,358);
+    context.lineTo(190,358);
+    context.stroke();
+
+
+    console.log("draw end");
+});
+</script>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259851011'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1259851011%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script> 
+</body>
+</html>

@@ -1,5 +1,3 @@
-layout: false 
----
 var move_count = 1;
 $(document).ready(function(){
 

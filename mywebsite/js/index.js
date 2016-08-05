@@ -10,12 +10,9 @@ $(document).ready(function(){
 			setInterval(update_time_only,1000);
 		});
 	},8000);
-
-	
-
-	
-
 }); 
+
+
 function update(){
 	
 	update_time_only();

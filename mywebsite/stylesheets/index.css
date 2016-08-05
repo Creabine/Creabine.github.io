@@ -73,12 +73,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   font-family: "Comic Sans MS", cursive, ‘Arial Black’, Gadget, sans-serif;
   background-color: #fff;
-  width: 1200px;
+  max-width: 1200px;
+  min-width: 750px;
   height: 100%;
   margin: 0 auto;
 }
 
-/* line 38, ../sass/index.scss */
+/* line 39, ../sass/index.scss */
 .dashboard {
   margin: 0 auto;
   position: relative;
@@ -88,7 +89,7 @@ body {
   border-radius: 350px;
   text-align: center;
   width: 700px;
-  height: 800px;
+  height: 700px;
 }
 
 @keyframes headshowup {
@@ -108,7 +109,7 @@ body {
     opacity: 0.9;
   }
 }
-/* line 57, ../sass/index.scss */
+/* line 58, ../sass/index.scss */
 .head {
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -123,7 +124,7 @@ body {
   animation-fill-mode: forwards;
   transition: all 0.5s;
 }
-/* line 69, ../sass/index.scss */
+/* line 70, ../sass/index.scss */
 .head:hover {
   transform: rotateY(180deg);
 }
@@ -142,8 +143,9 @@ body {
     opacity: 0.9;
   }
 }
-/* line 81, ../sass/index.scss */
-#myself {
+/* line 82, ../sass/index.scss */
+#demo_1 {
+  background-color: #49bcb5;
   position: absolute;
   left: 310px;
   top: -40px;
@@ -151,26 +153,9 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 82, ../sass/index.scss */
-#Japanese {
-  position: absolute;
-  left: 10px;
-  top: 130px;
-  animation: showup 2s linear 5s;
-  animation-fill-mode: forwards;
-}
-
 /* line 83, ../sass/index.scss */
-#movie {
-  position: absolute;
-  left: 4px;
-  top: 480px;
-  animation: showup 2s linear 6s;
-  animation-fill-mode: forwards;
-}
-
-/* line 84, ../sass/index.scss */
-#music {
+#demo_2 {
+  background-color: #49bcb5;
   position: absolute;
   left: 616px;
   top: 140px;
@@ -178,8 +163,19 @@ body {
   animation-fill-mode: forwards;
 }
 
+/* line 84, ../sass/index.scss */
+#demo_3 {
+  background-color: #49bcb5;
+  position: absolute;
+  left: 610px;
+  top: 490px;
+  animation: showup 2s linear 9s;
+  animation-fill-mode: forwards;
+}
+
 /* line 85, ../sass/index.scss */
-#ACG {
+#demo_4 {
+  background-color: #49bcb5;
   position: absolute;
   left: 310px;
   top: 660px;
@@ -188,11 +184,22 @@ body {
 }
 
 /* line 86, ../sass/index.scss */
-#game {
+#demo_5 {
+  background-color: #49bcb5;
   position: absolute;
-  left: 610px;
-  top: 490px;
-  animation: showup 2s linear 9s;
+  left: 4px;
+  top: 480px;
+  animation: showup 2s linear 6s;
+  animation-fill-mode: forwards;
+}
+
+/* line 87, ../sass/index.scss */
+#demo_6 {
+  background-color: #49bcb5;
+  position: absolute;
+  left: 10px;
+  top: 130px;
+  animation: showup 2s linear 5s;
   animation-fill-mode: forwards;
 }
 
@@ -213,7 +220,7 @@ body {
     opacity: 0.8;
   }
 }
-/* line 97, ../sass/index.scss */
+/* line 98, ../sass/index.scss */
 .rounded {
   opacity: 0;
   -moz-border-radius: 40px;
@@ -221,10 +228,18 @@ body {
   border-radius: 40px;
   width: 80px;
   height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  color: #fff;
 }
-/* line 103, ../sass/index.scss */
+/* line 108, ../sass/index.scss */
 .rounded:hover {
   box-shadow: 0px 0px 20px #0CC;
+}
+/* line 111, ../sass/index.scss */
+.rounded p {
+  height: 20px;
+  line-height: 60px;
 }
 
 @keyframes time_showup {
@@ -235,7 +250,7 @@ body {
     opacity: 1;
   }
 }
-/* line 114, ../sass/index.scss */
+/* line 120, ../sass/index.scss */
 .date, .time {
   font-family: "hooray";
   font-size: 40px;
@@ -243,14 +258,14 @@ body {
   position: relative;
 }
 
-/* line 122, ../sass/index.scss */
+/* line 128, ../sass/index.scss */
 .date {
   top: 480px;
   animation: time_showup 2s linear 2s;
   animation-fill-mode: forwards;
 }
 
-/* line 127, ../sass/index.scss */
+/* line 133, ../sass/index.scss */
 .time {
   top: -20px;
   animation: time_showup 2s linear 3s;

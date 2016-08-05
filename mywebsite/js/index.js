@@ -19,14 +19,14 @@ $(document).ready(function(){
 function update(){
 	
 	update_time_only();
-	
-	second_move(350,350,350,"myself",-90,40,50);
-	second_move(350,350,350,"music",90,40,50);
-	second_move(350,350,350,"game",-30,40,50);
-	second_move(350,350,350,"ACG",30,40,50);
-	second_move(350,350,350,"movie",150,40,50);
-	second_move(350,350,350,"Japanese",210,40,50);
+	second_move(350,350,350,"demo_1",-90,40,50);
+	second_move(350,350,350,"demo_2",90,40,50);
+	second_move(350,350,350,"demo_3",-30,40,50);
+	second_move(350,350,350,"demo_4",30,40,50);
+	second_move(350,350,350,"demo_5",150,40,50);
+	second_move(350,350,350,"demo_6",210,40,50);
 	move_count++;
+	
 }
 function update_time_only(){
 	var myDate = new Date();
@@ -49,7 +49,7 @@ function update_time_only(){
 	$("#minute").text(keep_2(myDate.myminute));
 	$("#second").text(keep_2(myDate.mysecond));
 }
-//参数分别为：恒星坐标，环绕半径，卫星id，卫星初始角度，卫星半径，移动间隔。
+//参数分别为：恒星坐标，环绕半径，行星id，行星初始角度，行星半径，移动间隔。
 function second_move(X,Y,R,id,deg,r1){ 
 	var r = R; // 半径
 	var x = X; // 园的中心点 x 坐标   中心点就是.dashboard的中心

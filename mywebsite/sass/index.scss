@@ -25,7 +25,8 @@ $clock_font_family:'hooray';
 body{
 	font-family:$normal_font_family;
 	background-color:#fff;
-	width:1200px;
+	max-width:1200px;
+	min-width:750px;
 	height:100%;
 	margin:0 auto;
 }
@@ -43,7 +44,7 @@ body{
 	@include border-radius(350px);
 	text-align:center;
 	width:700px;
-	height:800px;
+	height:700px;
 }
 @keyframes headshowup{
 	0% {opacity:0;}
@@ -78,12 +79,12 @@ body{
 	100% {opacity:0.9;}
 
 }
-#myself{position:absolute; left:310px; top:-40px;animation:showup 2s linear $clock_animation_delay+3;animation-fill-mode : forwards; }
-#Japanese{position:absolute; left:10px; top:130px;animation:showup 2s linear $clock_animation_delay+4;animation-fill-mode : forwards; }
-#movie{position:absolute; left:4px; top:480px;animation:showup 2s linear $clock_animation_delay+5;animation-fill-mode : forwards; }
-#music{position:absolute; left:616px; top:140px;animation:showup 2s linear $clock_animation_delay+6;animation-fill-mode : forwards; }
-#ACG{position:absolute; left:310px; top:660px;animation:showup 2s linear $clock_animation_delay+7;animation-fill-mode : forwards; }
-#game{position:absolute; left:610px; top:490px;animation:showup 2s linear $clock_animation_delay+8;animation-fill-mode : forwards; }
+#demo_1{background-color:#49bcb5;position:absolute; left:310px; top:-40px;animation:showup 2s linear $clock_animation_delay+3;animation-fill-mode : forwards; }
+#demo_2{background-color:#49bcb5;position:absolute; left:616px; top:140px;animation:showup 2s linear $clock_animation_delay+6;animation-fill-mode : forwards; }
+#demo_3{background-color:#49bcb5;position:absolute; left:610px; top:490px;animation:showup 2s linear $clock_animation_delay+8;animation-fill-mode : forwards; }
+#demo_4{background-color:#49bcb5;position:absolute; left:310px; top:660px;animation:showup 2s linear $clock_animation_delay+7;animation-fill-mode : forwards; }
+#demo_5{background-color:#49bcb5;position:absolute; left:4px; top:480px;animation:showup 2s linear $clock_animation_delay+5;animation-fill-mode : forwards; }
+#demo_6{background-color:#49bcb5;position:absolute; left:10px; top:130px;animation:showup 2s linear $clock_animation_delay+4;animation-fill-mode : forwards; }
 
 
 @keyframes rounded_hover{
@@ -99,10 +100,15 @@ body{
 	@include border-radius(40px);
 	width:80px;
 	height:80px;
+	line-height:80px;
+	vertical-align:middle;
+	color:#fff;
+	//font-size:20px;
 	//border:$text_border;
 	&:hover{
 		box-shadow: 0px 0px 20px #0CC;
 	}
+	p{height:20px;line-height:60px;}
 }
 @keyframes time_showup{
 	from {opacity:0;}

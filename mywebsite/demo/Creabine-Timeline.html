@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Creabine-Timeline</title>
+	<link rel="stylesheet" href="../stylesheets/Creabine-Timeline.css">
+  <script src="../js/demo/Creabine-Timeline.js"></script>
+</head>
+<body>
+
+	<div style="font-size: 26px;text-align: center;padding: 60px 10px;">
+		尝试手动改变浏览器窗口宽度或使用<code style="color: red;">F12--->Ctrl+Shift+M</code> 来查看响应式效果
+	</div>
+
+	<div id="timeLine"></div>
+
+
+<script>
+	var timeLineItemList = [
+		{
+  			time:'2010',
+  			contentList:[
+	  			'《钢铁侠1》',
+	  			'托尼·史塔克在恐怖分子追捕中受伤，在山洞中造出了第一副盔甲之后回到美国。',
+  			]
+  		},
+		{
+  			time:'2010',
+  			contentList:[
+	  			'《钢铁侠2》',
+	  			'托尼·史塔克公布了自己钢铁侠的身份,打造了代号“战争机器”的战服。'
+  			]
+  		},
+  		{
+  			time:'2011',
+  			contentList:[
+	  			'斯蒂夫·罗杰斯被一支石油勘探队在北极发现，斯蒂夫被解冻随即被送往纽约神盾局，尼克·弗瑞告诉斯蒂夫·罗杰斯他已经长眠了70年。',
+  			]
+  		},
+  		{
+  			time:'2012',
+  			contentList:[
+	  			'《复仇者联盟1》',
+	  			'洛基在其他恶役的协助下激活了立方体，尼克·弗瑞领导复仇者联盟抵抗外来的入侵，大战洛基。'
+  			]
+  		},
+  		{
+  			time:'2013',
+  			contentList:[
+	  			'《钢铁侠3》',
+	  			'托尼·斯塔克的生活被强敌毁灭殆尽，无路可退的他必须依靠精良的高科技装备以及过人才智，保护自己和身边最亲近的人，同时揪出真正的幕后元凶。',
+  			]
+  		},
+  		{
+  			time:'2014',
+  			contentList:[
+  				'《美国队长2: 冬日战士》',
+  				'复仇者联盟两年后, 神盾局出现九头蛇内奸。斯蒂夫·罗杰斯带领众人挫败敌人，并击败了寒冬战士，发现他其实是自己多年前失踪的好友巴蒂。'
+  			]
+  		},
+  		{
+  			time:'2015',
+  			contentList:[
+  				'《复仇者联盟：奥创时代》',
+  				'《蚁人》'
+  			]
+  		},
+  ]
+
+  new CreabineTimeline({
+  		root:'timeLine',
+  		itemList:timeLineItemList,
+  		startDirectionLeft: true,
+  		endWords:'持续更新中',
+  })
+</script>	
+</body>
+</html>

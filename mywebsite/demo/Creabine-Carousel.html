@@ -1,0 +1,201 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creabine-Carousel</title>
+       <style>
+.CreabineCarousel{
+	width: 100%;
+    height: 700px;
+    background-size: cover;
+    position: relative;
+}
+.CreabineCarousel .CreabineCarousel-dotContainer{
+	position:absolute;
+	bottom: 5%;
+	margin:0 auto;
+	z-index: 100;
+	list-style-type: none;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	padding: 0;
+}
+.CreabineCarousel .CreabineCarousel-dotContainer .dot{
+	width: 30px;
+	height: 4px;
+	border-radius:3px;
+	background-color:#fff;
+	display: inline-block;
+	margin:0 5px;
+	opacity: 0.7;
+}
+.CreabineCarousel .CreabineCarousel-dotContainer .dot:hover{
+	opacity: 1;
+}
+
+.CreabineCarousel .CreabineCarousel-item{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	transition:all 0.8s;
+}
+.CreabineCarousel .CreabineCarousel-item h1{
+	max-width: 600px;
+	text-align: center;
+	font-size: 5rem;
+	line-height: 1.3;
+	color: #fff;
+	padding: 300px 50px 0 50px;
+	margin:0 auto;
+}
+.CreabineCarousel .CreabineCarousel-item p{
+	max-width: 600px;
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: #fff;
+	padding-top: 10px 50px 0 50px;
+	margin:0 auto;
+}
+       </style>
+</head>
+<body>
+	
+	<div id="carouselRoot"></div>
+
+
+<script>
+function CreabineCarousel(options){
+	var imgPathList = options.images;
+    var textList = options.content;
+    if (!options.root) {
+        throw "require root to this CreabineCarousel";
+    }
+    if (!imgPathList) {
+        throw "must provide parameter images";
+    }
+    if (imgPathList.length != textList.length) {
+        throw "images are not equal to contents";
+    }
+    var changeCount = 0;
+    var timer;
+    var _autoScroll = options.autoScroll || false;
+    var _scrollDuration = options.scrollDuration || 4000;
+    var _height = options.height || 700;
+
+    function initElements() {
+    	var _root = document.getElementById(options.root);
+    	if (!_root) {
+            throw "no exist called this name element,please create element called this name";
+        }
+        _root.className = "CreabineCarousel";
+        _root.style.height = _height + "px";
+        var _dotContainer = document.createElement("ul");
+        _dotContainer.className = 'CreabineCarousel-dotContainer';
+        _root.appendChild(_dotContainer);
+        for (var i = 0; i < imgPathList.length; i++) {
+            var _dot = document.createElement("li");
+            _dot.className = "dot";
+            _dot.id = "item" + (i+1) + "dot";
+            _dotContainer.appendChild(_dot);
+            var _item = document.createElement("div");
+            _item.className = "CreabineCarousel-item"
+            _item.id = "item" + (i+1);
+            _item.style.backgroundImage = "url(" + imgPathList[i] + ")";
+            _item.style.backgroundSize = "cover";
+            _item.style.backgroundRepeat = "no-repeat";
+            if(i == 0){
+                _item.style.opacity = '0';
+                _item.style.zIndex = '1';
+            }
+            _root.appendChild(_item);
+            var _h = document.createElement("h1");
+            _h.innerText = textList[i].title;
+            _item.appendChild(_h);
+            var _p = document.createElement("p");
+            _p.innerText = textList[i].text;
+            _item.appendChild(_p);
+        }
+        _dotContainer.addEventListener("mouseover",function(e){
+        	if( e.target && e.target.className == "dot" ){
+        		clearInterval(timer);
+        		var id = e.target.id.substring(0,5);
+        		CarouselHover(id);
+        	}
+        });
+        _dotContainer.addEventListener("mouseout",function(e){
+        	if( e.target && e.target.className == "dot" ){
+        		var id = e.target.id;
+        		CarouselOut(id);
+        	}
+        });
+        if(_autoScroll){
+            timer = setInterval(function(){Carousel()},_scrollDuration);
+        }
+
+    }
+    function Carousel(){
+        var all = document.getElementsByClassName('CreabineCarousel-item');
+        for (var i = all.length - 1; i >= 0; i--) {
+            all[i].style.opacity = '0';
+            all[i].style.zIndex = '1';
+        }
+        var i=((changeCount++%5)+1);
+        var id = "item" + i;
+        document.getElementById(id).style.opacity = '1';
+        document.getElementById(id).style.zIndex = '10';
+    }
+    function CarouselHover(id){
+        clearInterval(timer);
+        var all = document.getElementsByClassName('CreabineCarousel-item');
+        for (var i = all.length - 1; i >= 0; i--) {
+            all[i].style.opacity = '0';
+            all[i].style.zIndex = '1';
+        }
+        document.getElementById(id).style.opacity = '1';
+        document.getElementById(id).style.zIndex = '10';
+    }
+    function CarouselOut(id){
+        var num = id.substring(4,5);
+        num = parseInt(num)-1;
+        changeCount = num;
+        timer = window.setInterval(function(){Carousel()},_scrollDuration);
+    }
+    initElements();
+}
+
+
+
+
+	new CreabineCarousel({
+		root:'carouselRoot',
+		autoScroll:true,
+		height:700,
+		images:['https://cdn.worktile.com/images/index/index_all_bg_1.jpg?v=4.5.18','https://cdn.worktile.com/images/index/index_all_bg_2.jpg?v=4.5.18','https://cdn.worktile.com/images/index/index_all_bg_3.jpg?v=4.5.18','https://cdn.worktile.com/images/index/index_all_bg_4.jpg?v=4.5.18','https://cdn.worktile.com/images/index/index_all_bg_5.jpg?v=4.5.18'],
+		content:[
+			{
+				title:"title-1",
+				text:"text-111"
+			},
+			{
+				title:"title-2",
+				text:"text-222"
+			},
+			{
+				title:"title-3",
+				text:"text-333"
+			},
+			{
+				title:"title-4",
+				text:"text-444"
+			},
+			{
+				title:"title-5",
+				text:"text-555"
+			},
+		]
+	});
+</script>
+</body>
+</html>

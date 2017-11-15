@@ -1,0 +1,121 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #55AC00;
+}
+header{
+	height: 200px;
+	width: 100%;
+	background-color: #fff;
+	opacity: 0.7;
+	position: absolute;
+}
+.title{
+	height: 150px;
+	line-height: 200px;
+	color: #666;
+	padding: 0 0 0 200px;
+	font-weight: bolder;
+	font-size: 55px;
+}
+.navbar{
+	height: 50px;
+	line-height: 50px;
+	margin:0;
+	padding: 0 180px 0 0;
+}
+.navbar li{
+	float: right;
+	margin: 0 25px;
+	list-style: none;
+	font-weight: bolder;
+	font-size: 20px;
+}
+.navbar li a{
+	text-decoration: none;
+	color: #666;
+	transition: all 0.5s;
+}
+.navbar li a:hover{
+	color: red;
+	font-size: 22px;
+}
+.img{
+	width: 100%;
+	height: 700px;
+	background-image: url('../images/tree.jpg');
+	background-size: cover;
+    background-position: center;
+}
+.content{
+	width: 1400px;
+	margin: 0 auto;
+	padding: 30px 30px 0 30px;
+}
+.left{
+	width: 400px;
+	float: left;
+	/*margin: 30px 0 20px 80px;*/
+}
+.contactUs{
+	height: 300px;
+	background-color: #fff;
+}
+h3{
+	text-align: center;
+	background-color: green;
+	color: #fff;
+	font-weight: bolder;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+}
+table{
+	padding: 30px 30px;
+	width: 100%;
+	text-align: left;
+}
+tr{
+	margin: 10px 0;
+}
+.bolder{
+	font-weight: bolder;
+	text-align: right;
+}
+.map{
+	margin: 30px 0 0 0;
+	height: 300px;
+	overflow: hidden;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+.right{
+	width: 800px;
+	height: 634px;
+	float: right;
+	background-color: #fff;
+}
+h1{
+	padding: 0 0 0 30px;
+}
+hr{
+	margin: 10px 40px;
+}
+p{
+	padding: 10px 40px;
+	font-size: 20px;
+	line-height: 35px;
+}
+
+footer{
+	background-color: green;
+	padding: 10px 0;
+	margin: 30px 0 0 0;
+}
+footer>p{
+	text-align: center;
+	color: #fff;
+	margin: 0;
+}
